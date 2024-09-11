@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Brain, Rocket, Globe, UserCheck, Lightbulb, Code, ChartBar } from 'lucide-react';
 
 const GradientText = ({ children, className }) => (
@@ -25,7 +26,7 @@ const Section = ({ title, icon: Icon, children, className }) => (
 
 export default function AIInnovationProgramBrochure() {
   return (
-    <div className="font-sans text-gray-800 bg-gradient-to-br from-gray-900 to-indigo-900 min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-indigo-900 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto p-8">
         {/* Hero Section */}
         <div className="text-center mb-16 pt-10">
@@ -52,9 +53,11 @@ export default function AIInnovationProgramBrochure() {
               <h4 className="text-2xl font-semibold mb-4 text-indigo-300">Dr. Aous A. Abdo</h4>
               <ul className="space-y-2 text-gray-300">
                 <li>• Founder and CEO of Analytica Data Science Solutions</li>
+                <li>• Fellow of the US National Academy of Sciences</li>
+                <li>• Strategic advisor to several agencies in the US Federal government and Fortune 500 companies</li>
                 <li>• Former lead scientist at NASA and Naval Research Laboratory</li>
                 <li>• Author of 3 groundbreaking books on Machine Learning and AI</li>
-                <li>• 24+ peer-reviewed publications in Nature and Science</li>
+                <li>• 24+ publications in international journals including Nature and Science</li>
                 <li>• International AI educator and AI thought leader</li>
               </ul>
             </div>
@@ -117,9 +120,20 @@ export default function AIInnovationProgramBrochure() {
         {/* Call to Action */}
         <div className="text-center">
           <h3 className="text-3xl font-bold mb-6 text-white">Ready to Shape the Future?</h3>
-          <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-            Apply Now
-          </button>
+          <div className="space-x-4">
+            <Link 
+              to="/initial-signup" 
+              className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            >
+              Apply Now
+            </Link>
+            <Link 
+              to="/assessment" 
+              className="inline-block bg-gradient-to-r from-green-600 to-blue-600 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            >
+              Take Fit Assessment
+            </Link>
+          </div>
           <p className="mt-4 text-indigo-300">
             For more information, visit <a href="https://www.analyticadss.com/" className="text-indigo-200 hover:text-white underline">www.analyticadss.com</a> or contact us at <a href="mailto:AI_mastery_accelerator@analyticadss.com" className="text-indigo-200 hover:text-white underline">AI_mastery_accelerator@analyticadss.com</a>
           </p>
